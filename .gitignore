@@ -1,0 +1,91 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# Jupyter / Notebooks
+# =========================
+.ipynb_checkpoints/
+*.ipynb
+
+# (optional) if you WANT notebooks, remove above line
+
+# =========================
+# Environment variables / secrets
+# =========================
+.env
+.env.*
+*.env
+
+# Kubeflow / GCP creds
+*.json
+service-account*.json
+
+# =========================
+# Logs & temp files
+# =========================
+logs/
+*.log
+tmp/
+temp/
+
+# =========================
+# Data & ML artifacts
+# =========================
+data/
+datasets/
+*.csv
+*.tsv
+*.parquet
+
+# Model files
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.pb
+
+# =========================
+# Docker / Kubernetes
+# =========================
+*.tar
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Node (if frontend exists)
+# =========================
+node_modules/
+package-lock.json
+yarn.lock
+
+# =========================
+# Misc
+# =========================
+*.bak
+*.swp
