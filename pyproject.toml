@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kubeflow-mcp"
+version = "0.1.0"
+description = "MCP server for Kubeflow SDK trainer workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Kubeflow MCP Contributors" }]
+dependencies = [
+  "kubeflow>=0.4.0",
+  "fastmcp>=2.10.0",
+  "pydantic>=2.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "ruff>=0.6.0",
+]
+
+[project.scripts]
+kubeflow-mcp = "kubeflow_mcp.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "integration: marks tests that validate integration behavior",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
